@@ -51,7 +51,7 @@ for each item in lineItems
 		}
 	}
 	
-	if(canUpdatePrice)
+	if(canUpdatePrice == true)
 	{
 		itemMap = Map();
 		itemMap.put("rate", bcyRate.round(2));
