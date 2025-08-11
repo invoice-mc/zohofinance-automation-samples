@@ -142,6 +142,7 @@ for each item in lineItems
 {
 	
 	itemID=item.get("item_id");
+	taxID = item.get("tax_id");
 	qty=item.get("quantity");
 	lineItemID=item.get("line_item_id");
 	type=item.get("product_type");
@@ -167,6 +168,7 @@ for each item in lineItems
 			pList=poCategoryMap.get(vendorID);
 			productMap=Map();
 			productMap.put("item_id",itemID);
+			productMap.put("tax_id",taxID);
 			productMap.put("salesorder_item_id",lineItemID);
 			productMap.put("quantity",qty);
 		  		
@@ -181,7 +183,7 @@ for each item in lineItems
 			productMap.put("item_id",itemID);
 			productMap.put("salesorder_item_id",lineItemID);
 			productMap.put("quantity",qty);
-				
+			productMap.put("tax_id",taxID);
 			iList.add(productMap);
 			poCategoryMap.put(vendorID,iList);
 		}
