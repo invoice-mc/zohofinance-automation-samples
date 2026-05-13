@@ -1,0 +1,597 @@
+{
+  "_descripcion": "Mapa maestro de estructuras JSON de Zoho Books - Módulos de Ventas. Usar como referencia al escribir Custom Functions en Deluge para conocer los campos disponibles y sus API names.",
+
+  "invoice": {
+    "invoice_id": "",
+    "invoice_number": "",
+    "date": "YYYY-MM-DD",
+    "due_date": "YYYY-MM-DD",
+    "status": "draft | sent | paid | overdue | void",
+    "customer_id": "",
+    "customer_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "price_precision": 2,
+    "reference_number": "",
+    "recurring_invoice_id": "",
+    "zcrm_potential_id": "",
+    "payment_terms": 0,
+    "payment_terms_label": "",
+    "salesperson_id": "",
+    "salesperson_name": "",
+    "notes": "",
+    "terms": "",
+    "sub_total": 0,
+    "tax_total": 0,
+    "discount_amount": 0,
+    "discount": 0,
+    "adjustment": 0,
+    "shipping_charge": 0,
+    "total": 0,
+    "balance": 0,
+    "billing_address": {
+      "address": "",
+      "street2": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "country": "",
+      "phone": "",
+      "attention": ""
+    },
+    "shipping_address": {
+      "address": "",
+      "street2": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "country": "",
+      "phone": "",
+      "attention": ""
+    },
+    "custom_fields": [
+      {
+        "field_id": "",
+        "label": "",
+        "api_name": "cf_nombre_campo",
+        "value": "",
+        "data_type": "string | formula | dropdown | checkbox | date | lookup | number | decimal"
+      }
+    ],
+    "custom_field_hash": {
+      "cf_nombre_campo": "",
+      "cf_nombre_campo_unformatted": ""
+    },
+    "line_items": [
+      {
+        "line_item_id": "",
+        "item_id": "",
+        "sku": "",
+        "name": "",
+        "description": "",
+        "item_order": 1,
+        "quantity": 0,
+        "rate": 0,
+        "bcy_rate": 0,
+        "sales_rate": 0,
+        "purchase_price": 0,
+        "discount": 0,
+        "tax_id": "",
+        "tax_name": "",
+        "tax_percentage": 0,
+        "item_total": 0,
+        "account_id": "",
+        "account_name": "",
+        "unit": "",
+        "product_type": "goods | service",
+        "item_type": "inventory | sales | purchases",
+        "location_id": "",
+        "location_name": "",
+        "stock_on_hand": 0,
+        "available_stock": 0,
+        "committed_stock": 0,
+        "cost_amount": 0,
+        "item_profit_margin_amount": 0,
+        "item_profit_margin_percentage": 0,
+        "pricebook_id": "",
+        "salesorder_item_id": "",
+        "item_custom_fields": [],
+        "tags": []
+      }
+    ]
+  },
+
+  "salesorder": {
+    "salesorder_id": "",
+    "salesorder_number": "",
+    "date": "YYYY-MM-DD",
+    "shipment_date": "YYYY-MM-DD",
+    "status": "draft | open | invoiced | void | cancelled",
+    "customer_id": "",
+    "customer_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "reference_number": "",
+    "estimate_id": "",
+    "zcrm_potential_id": "",
+    "zcrm_potential_name": "",
+    "salesperson_id": "",
+    "salesperson_name": "",
+    "delivery_method": "",
+    "notes": "",
+    "terms": "",
+    "sub_total": 0,
+    "tax_total": 0,
+    "discount_amount": 0,
+    "discount": 0,
+    "adjustment": 0,
+    "shipping_charge": 0,
+    "total": 0,
+    "billing_address": {
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "country": "",
+      "phone": ""
+    },
+    "shipping_address": {
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "country": "",
+      "phone": ""
+    },
+    "custom_fields": [
+      {
+        "field_id": "",
+        "label": "",
+        "api_name": "cf_nombre_campo",
+        "value": "",
+        "data_type": "string | formula | dropdown | checkbox | date | lookup | number | decimal"
+      }
+    ],
+    "custom_field_hash": {
+      "cf_nombre_campo": "",
+      "cf_nombre_campo_unformatted": ""
+    },
+    "line_items": [
+      {
+        "line_item_id": "",
+        "item_id": "",
+        "variant_id": "",
+        "sku": "",
+        "name": "",
+        "description": "",
+        "item_order": 1,
+        "quantity": 0,
+        "quantity_invoiced": 0,
+        "quantity_backordered": 0,
+        "quantity_cancelled": 0,
+        "rate": 0,
+        "bcy_rate": 0,
+        "sales_rate": 0,
+        "purchase_price": 0,
+        "discount": 0,
+        "tax_id": "",
+        "tax_name": "",
+        "tax_percentage": 0,
+        "item_total": 0,
+        "account_id": "",
+        "account_name": "",
+        "unit": "",
+        "product_type": "goods | service",
+        "item_type": "inventory | sales | purchases",
+        "location_id": "",
+        "location_name": "",
+        "is_invoiced": false,
+        "item_profit_margin_amount": 0,
+        "item_profit_margin_percentage": 0,
+        "pricebook_id": "",
+        "item_custom_fields": [],
+        "custom_field_hash": {}
+      }
+    ],
+    "purchaseorders": [],
+    "invoices": []
+  },
+
+  "estimate": {
+    "estimate_id": "",
+    "estimate_number": "",
+    "date": "YYYY-MM-DD",
+    "expiry_date": "YYYY-MM-DD",
+    "status": "draft | sent | accepted | declined | invoiced | expired",
+    "customer_id": "",
+    "customer_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "reference_number": "",
+    "zcrm_potential_id": "",
+    "salesperson_id": "",
+    "salesperson_name": "",
+    "location_id": "",
+    "location_name": "",
+    "notes": "",
+    "terms": "",
+    "sub_total": 0,
+    "tax_total": 0,
+    "discount_amount": 0,
+    "discount": 0,
+    "adjustment": 0,
+    "shipping_charge": 0,
+    "total": 0,
+    "custom_fields": [
+      {
+        "field_id": "",
+        "label": "",
+        "api_name": "cf_nombre_campo",
+        "value": "",
+        "data_type": "string | formula | dropdown | checkbox | date | lookup | number | decimal"
+      }
+    ],
+    "custom_field_hash": {
+      "cf_nombre_campo": "",
+      "cf_nombre_campo_unformatted": ""
+    },
+    "line_items": [
+      {
+        "line_item_id": "",
+        "item_id": "",
+        "sku": "",
+        "name": "",
+        "description": "",
+        "item_order": 1,
+        "quantity": 0,
+        "rate": 0,
+        "bcy_rate": 0,
+        "discount": 0,
+        "tax_id": "",
+        "tax_name": "",
+        "tax_percentage": 0,
+        "item_total": 0,
+        "account_id": "",
+        "account_name": "",
+        "unit": "",
+        "product_type": "goods | service",
+        "location_id": "",
+        "location_name": "",
+        "item_custom_fields": [],
+        "pricebook_id": ""
+      }
+    ],
+    "salesorders": [],
+    "retainerinvoices": []
+  },
+
+  "creditnote": {
+    "creditnote_id": "",
+    "creditnote_number": "",
+    "date": "YYYY-MM-DD",
+    "status": "open | closed | void",
+    "customer_id": "",
+    "customer_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "price_precision": 2,
+    "reference_number": "",
+    "is_emailed": false,
+    "notes": "",
+    "terms": "",
+    "sub_total": 0,
+    "tax_total": 0,
+    "discount_amount": 0,
+    "discount": 0,
+    "adjustment": 0,
+    "shipping_charge": 0,
+    "total": 0,
+    "total_credits_used": 0,
+    "total_refunded_amount": 0,
+    "balance": 0,
+    "invoices_credited": [
+      {
+        "invoice_id": "",
+        "creditnote_invoice_id": "",
+        "invoice_number": "",
+        "date": "YYYY-MM-DD",
+        "credited_amount": 0
+      }
+    ],
+    "custom_fields": [
+      {
+        "api_name": "cf_nombre_campo",
+        "value": ""
+      }
+    ],
+    "custom_field_hash": {},
+    "line_items": [
+      {
+        "line_item_id": "",
+        "item_id": "",
+        "name": "",
+        "description": "",
+        "item_order": 1,
+        "quantity": 0,
+        "rate": 0,
+        "bcy_rate": 0,
+        "discount": 0,
+        "tax_id": "",
+        "tax_name": "",
+        "tax_percentage": 0,
+        "item_total": 0,
+        "account_id": "",
+        "account_name": "",
+        "unit": "",
+        "invoice_id": "",
+        "invoice_item_id": "",
+        "location_id": "",
+        "location_name": ""
+      }
+    ],
+    "creditnote_refunds": []
+  },
+
+  "recurring_invoice": {
+    "recurring_invoice_id": "",
+    "recurrence_name": "",
+    "status": "active | expired | stopped",
+    "recurrence_frequency": "days | weeks | months | years",
+    "repeat_every": 1,
+    "start_date": "YYYY-MM-DD",
+    "end_date": "YYYY-MM-DD",
+    "last_sent_date": "YYYY-MM-DD",
+    "next_invoice_date": "YYYY-MM-DD",
+    "payment_terms": 0,
+    "customer_id": "",
+    "customer_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "salesperson_id": "",
+    "salesperson_name": "",
+    "sub_total": 0,
+    "tax_total": 0,
+    "adjustment": 0,
+    "shipping_charge": 0,
+    "total": 0,
+    "custom_fields": [
+      {
+        "api_name": "cf_nombre_campo",
+        "value": ""
+      }
+    ],
+    "custom_field_hash": {},
+    "line_items": [
+      {
+        "line_item_id": "",
+        "item_id": "",
+        "sku": "",
+        "name": "",
+        "description": "",
+        "item_order": 1,
+        "quantity": 0,
+        "rate": 0,
+        "discount": 0,
+        "tax_id": "",
+        "tax_name": "",
+        "tax_percentage": 0,
+        "item_total": 0,
+        "account_id": "",
+        "account_name": "",
+        "unit": "",
+        "location_id": "",
+        "location_name": ""
+      }
+    ]
+  },
+
+  "retainer_invoice": {
+    "retainerinvoice_id": "",
+    "retainerinvoice_number": "",
+    "date": "YYYY-MM-DD",
+    "status": "draft | sent | paid | void",
+    "last_payment_date": "YYYY-MM-DD",
+    "reference_number": "",
+    "customer_id": "",
+    "customer_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "price_precision": 2,
+    "is_viewed_by_client": false,
+    "is_emailed": false,
+    "notes": "",
+    "terms": "",
+    "sub_total": 0,
+    "total": 0,
+    "custom_fields": [
+      {
+        "api_name": "cf_nombre_campo",
+        "value": ""
+      }
+    ],
+    "custom_field_hash": {},
+    "line_items": [
+      {
+        "line_item_id": "",
+        "description": "",
+        "item_order": 1,
+        "rate": 0,
+        "bcy_rate": 0,
+        "tax_id": "",
+        "tax_name": "",
+        "tax_percentage": 0,
+        "item_total": 0,
+        "account_id": "",
+        "location_id": "",
+        "location_name": ""
+      }
+    ],
+    "payments": []
+  },
+
+  "sales_receipt": {
+    "sales_receipt_id": "",
+    "receipt_number": "",
+    "date": "YYYY-MM-DD",
+    "status": "paid",
+    "customer_id": "",
+    "customer_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "price_precision": 2,
+    "reference_number": "",
+    "payment_mode": 0,
+    "payment_mode_name": "",
+    "deposit_to_account_id": "",
+    "deposit_to_account_name": "",
+    "salesperson_id": "",
+    "salesperson_name": "",
+    "branch_id": "",
+    "branch_name": "",
+    "location_id": "",
+    "location_name": "",
+    "notes": "",
+    "terms": "",
+    "template_id": "",
+    "template_name": "",
+    "sub_total": 0,
+    "tax_total": 0,
+    "discount_amount": 0,
+    "discount": 0,
+    "adjustment": 0,
+    "shipping_charge": 0,
+    "total": 0,
+    "custom_fields": [
+      {
+        "api_name": "cf_nombre_campo",
+        "value": "",
+        "data_type": "string | lookup | checkbox | date"
+      }
+    ],
+    "custom_field_hash": {
+      "cf_nombre_campo": "",
+      "cf_nombre_campo_unformatted": ""
+    },
+    "line_items": [
+      {
+        "line_item_id": "",
+        "item_id": "",
+        "sku": "",
+        "name": "",
+        "description": "",
+        "item_order": 1,
+        "quantity": 0,
+        "rate": 0,
+        "bcy_rate": 0,
+        "discount": 0,
+        "tax_id": "",
+        "tax_name": "",
+        "tax_percentage": 0,
+        "item_total": 0,
+        "account_id": "",
+        "account_name": "",
+        "unit": "",
+        "product_type": "goods | service",
+        "item_type": "inventory | sales | purchases",
+        "location_id": "",
+        "location_name": "",
+        "item_custom_fields": []
+      }
+    ]
+  },
+
+  "customer_payment": {
+    "payment_id": "",
+    "payment_number": "",
+    "date": "YYYY-MM-DD",
+    "payment_status": "paid",
+    "customer_id": "",
+    "customer_name": "",
+    "payment_mode": "",
+    "account_id": "",
+    "account_name": "",
+    "account_type": "cash | bank",
+    "customer_advance_account_id": "",
+    "customer_advance_account_name": "",
+    "currency_code": "EUR",
+    "exchange_rate": 1,
+    "amount": 0,
+    "unused_amount": 0,
+    "bank_charges": 0,
+    "bank_charges_account_id": "",
+    "description": "",
+    "reference_number": "",
+    "branch_id": "",
+    "branch_name": "",
+    "location_id": "",
+    "location_name": "",
+    "salesperson_id": "",
+    "salesperson_name": "",
+    "custom_fields": [
+      {
+        "api_name": "cf_nombre_campo",
+        "value": ""
+      }
+    ],
+    "custom_field_hash": {},
+    "invoices": [
+      {
+        "invoice_id": "",
+        "invoice_number": "",
+        "invoice_payment_id": "",
+        "date": "YYYY-MM-DD",
+        "due_date": "YYYY-MM-DD",
+        "amount_applied": 0,
+        "total": 0,
+        "balance": 0
+      }
+    ]
+  },
+
+  "organization": {
+    "organization_id": "",
+    "name": "",
+    "time_zone": "Europe/Madrid",
+    "language_code": "es",
+    "date_format": "dd/MM/yyyy",
+    "currency_id": "",
+    "currency_code": "EUR",
+    "currency_symbol": "€",
+    "portal_name": "",
+    "data_center_extension": ".com | .eu",
+    "api_root_endpoint": "https://www.zohoapis.com/books/v3",
+    "email": "",
+    "phone": "",
+    "website": "",
+    "address": {
+      "street_address1": "",
+      "street_address2": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zip": ""
+    },
+    "custom_fields": [
+      {
+        "index": 1,
+        "label": "",
+        "value": ""
+      }
+    ],
+    "custom_field_hash": {
+      "cf_1": "",
+      "cf_2": "",
+      "cf_3": ""
+    }
+  },
+
+  "_deluge_referencia": {
+    "_nota": "Ejemplos de acceso a campos en Deluge",
+    "obtener_registro": "registro = zoho.books.getRecordsByID('Invoices', organizationID, invoiceID, 'zbooks').get('invoice');",
+    "campo_simple": "total = registro.get('total');",
+    "campo_personalizado": "valorCF = registro.get('custom_field_hash').get('cf_nombre_api_campo');",
+    "lineas_item": "lineItems = registro.get('line_items').toList();",
+    "recorrer_items": "for each item in lineItems { nombre = item.get('name'); cantidad = item.get('quantity'); }",
+    "nombres_modulo_validos": "Invoices | Estimates | Salesorders | Purchaseorders | Bills | Creditnotes | Contacts | Items | CustomerPayments | Expenses | RetainerInvoices | RecurringInvoices | SalesReceipts"
+  }
+}
